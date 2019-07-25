@@ -39,5 +39,17 @@ console.log(x[0].substr(1)); // OK
 
 // enum Color {Red, Green, Blue}
 enum Color {Red = 1, Green = 2, Blue = 4}
+
 let c: Color = Color.Green;
 console.log(Color)
+
+function f(s) {
+    let x = 20;
+    if (s) {
+        let x = 10;
+        x = 30;
+    }
+    return x;
+}
+
+f(false)

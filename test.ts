@@ -68,3 +68,9 @@ function test({a = "", b = 0}: { a: string, b: number } = {}): void {
 }
 
 test();
+
+interface Obj {
+    color?: string
+
+    [propName: string]: any // 添加任意类型的属性
+}

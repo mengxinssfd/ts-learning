@@ -1,5 +1,6 @@
 var GetterSetterTest = /** @class */ (function () {
     function GetterSetterTest() {
+        this.p = "2";
     }
     Object.defineProperty(GetterSetterTest.prototype, "test", {
         get: function () {
@@ -13,6 +14,7 @@ var GetterSetterTest = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    GetterSetterTest.g = 10;
     return GetterSetterTest;
 }());
 var test = new GetterSetterTest();

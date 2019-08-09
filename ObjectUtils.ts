@@ -4,7 +4,9 @@ export class ObjectUtils {
      * @param target
      * @param callback
      */
-    static filter(target: object, callback = (value: any, key: string): boolean => true): object {
+    // callback: (value: any, key: string) => boolean 是函数类型
+    static filter(target: object, callback: (value: any, key: string) => boolean = (value, key) => true): object {
+        // static filter(target: object, callback = (value: any, key: string): boolean => true): object {
         const obj: object = {};
         for (const key in target) {
             const value = target[key];

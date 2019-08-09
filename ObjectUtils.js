@@ -8,8 +8,10 @@ var ObjectUtils = /** @class */ (function () {
      * @param target
      * @param callback
      */
+    // callback: (value: any, key: string) => boolean 是函数类型
     ObjectUtils.filter = function (target, callback) {
         if (callback === void 0) { callback = function (value, key) { return true; }; }
+        // static filter(target: object, callback = (value: any, key: string): boolean => true): object {
         var obj = {};
         for (var key in target) {
             var value = target[key];

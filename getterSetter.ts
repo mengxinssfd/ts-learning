@@ -1,5 +1,7 @@
 class GetterSetterTest {
     private _test: number;
+    static g: number = 10;
+    protected p:string = "2";
 
     get test(): number {
         console.log("get")

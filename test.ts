@@ -74,3 +74,4 @@ interface Obj {
 
     [propName: string]: any // 添加任意类型的属性
 }
+

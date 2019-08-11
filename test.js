@@ -48,3 +48,30 @@ var Color;
 })(Color || (Color = {}));
 var c = Color.Green;
 console.log(Color);
+function f(s) {
+    var x = 20;
+    var x_2 = 1;
+    if (s) {
+        var x_1 = 10;
+        x_1 = 30;
+    }
+    return x;
+}
+f(false);
+for (var i = 0; i < 10; i++) {
+    var _loop_1 = function (i_1) {
+        setTimeout(function () {
+            console.log(i_1);
+        }, 100 * i_1);
+    };
+    for (var i_1 = 0; i_1 < 20; i_1++) {
+        _loop_1(i_1);
+    }
+}
+// TODO 类型推断出错
+function test(_a) {
+    var _b = _a === void 0 ? {} : _a, _c = _b.a, a = _c === void 0 ? "" : _c, _d = _b.b, b = _d === void 0 ? 0 : _d;
+    //     // ...
+}
+sdfs;
+test();

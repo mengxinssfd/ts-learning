@@ -9,7 +9,7 @@ class Person {
         this.fullName = `${firstName} ${lastName}`;
     }
 
-    test(): any {
+    test(): void {
         console.log(this.fullName);
     }
 

@@ -1,4 +1,6 @@
 class Person {
+    static skinColor: string;
+    private money: number = 100;
     firstName: string;
     lastName: string;
     fullName: string;
@@ -15,8 +17,13 @@ class Person {
 
 }
 
-class You extends Person {
+// P2
+const Person2: typeof Person = Person;
+Person2.skinColor = "white";
+const ps = new Person2("a", "b");
+console.log("money:", ps.money);
 
+class You extends Person {
     constructor(firstName: string, lastName: string) {
         super(firstName, lastName);
         this.test();
@@ -41,11 +48,11 @@ console.log(x[0].substr(1)); // OK
 enum Color {Red = 1, Green = 2, Blue = 4}
 
 let c: Color = Color.Green;
-console.log(Color)
+console.log(Color);
 
 function f(s) {
     let x = 20;
-    let x_2 = 1
+    let x_2 = 1;
     if (s) {
         let x = 10;
         x = 30;
@@ -53,7 +60,7 @@ function f(s) {
     return x;
 }
 
-f(false)
+f(false);
 for (var i = 0; i < 10; i++) {
     for (let i = 0; i < 20; i++) {
         setTimeout(function () {
@@ -62,12 +69,11 @@ for (var i = 0; i < 10; i++) {
     }
 }
 
-// TODO 类型推断出错
-function test({a = "", b = 0}: { a: string, b: number } = {}): void {
+// TODO 类型推断出错 fixme:已解决
+// MARK sdfsdf
+function test({a = "", b = 0}: { a?: string, b?: number } = {}): void {
     //     // ...
 }
-
-sdfs
 
 test();
 

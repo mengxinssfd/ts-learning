@@ -10,6 +10,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var Person = /** @class */ (function () {
     function Person(firstName, lastName) {
+        this.money = 100;
         this.firstName = firstName;
         this.lastName = lastName;
         this.fullName = firstName + " " + lastName;
@@ -19,6 +20,11 @@ var Person = /** @class */ (function () {
     };
     return Person;
 }());
+// P2
+var Person2 = Person;
+Person2.skinColor = "white";
+var ps = new Person2("a", "b");
+console.log("money:", ps.money);
 var You = /** @class */ (function (_super) {
     __extends(You, _super);
     function You(firstName, lastName) {
@@ -68,10 +74,10 @@ for (var i = 0; i < 10; i++) {
         _loop_1(i_1);
     }
 }
-// TODO 类型推断出错
+// TODO 类型推断出错 fixme:已解决
+// MARK sdfsdf
 function test(_a) {
     var _b = _a === void 0 ? {} : _a, _c = _b.a, a = _c === void 0 ? "" : _c, _d = _b.b, b = _d === void 0 ? 0 : _d;
     //     // ...
 }
-sdfs;
 test();
